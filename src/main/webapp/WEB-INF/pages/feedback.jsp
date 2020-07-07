@@ -7,7 +7,7 @@
 <title>SpringBoot Lesson End Project</title>
 <style>
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], textarea {
+input[type=text], input[type=email],textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
@@ -45,13 +45,16 @@ input[type=submit]:hover {
 <div class="container">
   <form method="post" action="/feedback">
 <label for="firstname">First Name</label>
-    <input type="text" id="firstname" name="firstname" placeholder="Your first name..">
+    <input type="text" id="firstname" name="firstname" placeholder="Your first name" required>
 <br>
     <label for="lastname">Last Name</label>
-    <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name" required>
 <br>
-    <label for="feedback1">Subject</label>
-    <textarea id="feedback1" name="feedback1" placeholder="Write your feedback here..." style="height:200px"></textarea>
+<label for="email">Email Id</label>
+    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+<br>
+    <label for="feedback1">Feedback</label>
+    <textarea id="feedback1" name="feedback1" placeholder="Write your feedback here..." style="height:200px" required></textarea>
 <br>
     <input type="submit" value="Submit">
 

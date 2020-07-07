@@ -15,8 +15,8 @@ public class MyRestApp {
 	private AppService service;
 
 	@PostMapping("/feedback")
-	public String userRegister(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname, @RequestParam("feedback1") String feedback1) {
-	Feedback f = new Feedback(firstname, lastname, feedback1);
+	public String userRegister(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname, @RequestParam("email") String email , @RequestParam("feedback1") String feedback1) {
+	Feedback f = new Feedback(firstname, lastname, email,feedback1);
 	boolean data= service.addFeedback(f);
 	if(data) {
 		return "Feedback added succesfully!";
